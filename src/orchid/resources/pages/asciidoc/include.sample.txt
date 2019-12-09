@@ -1,0 +1,10 @@
+not included in tag front
+
+# tag::part[] 
+included this part 
+from text file into tests.adoc document given tag "part".
+# end::part[] 
+
+not included in tag back
+
+

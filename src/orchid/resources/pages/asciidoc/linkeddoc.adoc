@@ -1,0 +1,13 @@
+= linked asciidoc document
+:outfilesuffix:
+// :relfileprefix: ../
+
+a linked section subpage..
+
+== linked section
+
+and back linking:
+
+* xref back <<asciidocpage#>>
+* link back link:asciidocpage[]
+

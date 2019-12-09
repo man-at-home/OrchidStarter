@@ -1,0 +1,57 @@
+= basic linked variations in asciidoc
+:outfilesuffix:
+// not needed ? :relfileprefix: ../
+:toc:
+
+== play with this file
+
+* build `gradle orchidServe`
+* view `http://localhost:8080/asciidoc/asciidocpage`
+
+== official docs  
+
+* https://asciidoctor.org/docs/user-manual/#navigating-between-source-files
+* https://asciidoctor.org/docs/user-manual/#inter-document-cross-references
+
+== linking
+
+|===
+| sample relative linking | result
+
+| <<linkeddoc#linkedSection, asciidoc linked via xref!>>
+| inter document cross reference (first choice),
+_could work with :outfilesuffix: to remove .html suffix_
+
+| link:linkeddoc{outfilesuffix}#linkedSection[asciidoc linked via link!]
+| link relative (second choice), _could work with :outfilesuffix:_
+
+|===
+
+== including
+
+_including does not work with orchid. E.g. safe modes
+enabled?_
+
+.relative url include
+....
+include::include.sample.txt[]
+....
+
+.relative url partial include
+....
+include::include.sample.txt[tag=part]
+....
+
+
+== using images
+
+_image links do work, images have to be copied separatly
+(e.g. with gradle copy task)._ 
+
+=== relative image 
+
+image::avatar.jpg[]
+
+=== absolute image url
+
+image::https://blog-of-a-man-at-home.netlify.com/assets/media/logo.jpg[]
